@@ -1,0 +1,174 @@
+/* DeactivateComponent.css */
+.desa-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+  }
+  
+  .desa-button:hover:not(:disabled) {
+    background-color: #c82333;
+  }
+  
+  .desa-button:disabled {
+    background-color: #e9a5ac;
+    cursor: not-allowed;
+  }
+  
+  .desa-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .desa-dialog {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: desa-dialog-appear 0.2s ease-out;
+  }
+  
+  @keyframes desa-dialog-appear {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .desa-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .desa-dialog-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #374151;
+  }
+  
+  .desa-close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  
+  .desa-close-button:hover {
+    color: #374151;
+  }
+  
+  .desa-dialog-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .desa-warning-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .desa-warning-text {
+    color: #6b7280;
+    margin-top: 8px;
+  }
+  
+  .desa-error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 16px;
+    text-align: left;
+  }
+  
+  .desa-dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .desa-cancel-button,
+  .desa-confirm-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .desa-cancel-button {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+  }
+  
+  .desa-cancel-button:hover:not(:disabled) {
+    background-color: #f3f4f6;
+  }
+  
+  .desa-confirm-button {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: white;
+  }
+  
+  .desa-confirm-button:hover:not(:disabled) {
+    background-color: #c82333;
+  }
+  
+  .desa-cancel-button:disabled,
+  .desa-confirm-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .desa-loading-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .desa-loading-text::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: desa-spin 1s linear infinite;
+  }
+
+  
+  @keyframes desa-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

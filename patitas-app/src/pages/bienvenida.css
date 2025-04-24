@@ -1,0 +1,238 @@
+/* Bienvenida.css */
+.bienven-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f3e8ff, #e0f2fe);
+  padding: 1rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Mejora el scrolling en iOS */
+}
+
+.bienven-wrapper {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding-bottom: 2rem; /* Espacio adicional al final para evitar que el botón quede cortado */
+}
+
+.bienven-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.bienven-icon-main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.bienven-icon-main svg {
+  width: 3rem;
+  height: 3rem;
+  color: #9333ea;
+}
+
+.bienven-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.bienven-subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.bienven-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .bienven-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bienven-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: auto;
+  min-height: 130px;
+  user-select: none; /* Evitar selección de texto al hacer tap */
+  -webkit-tap-highlight-color: transparent; /* Eliminar resaltado al tap en iOS */
+  touch-action: manipulation; /* Optimizar para gestos táctiles */
+}
+
+.bienven-card:hover,
+.bienven-card:active {
+  transform: translateY(-0.15rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bienven-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.icon-container svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.admin-icon,
+.estado-icon,
+.custom-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-container.blue {
+  background-color: #dbeafe;
+}
+
+.icon-container.blue svg {
+  color: #2563eb;
+}
+
+.icon-container.purple {
+  background-color: #f3e8ff;
+}
+
+.icon-container.purple svg {
+  color: #9333ea;
+}
+
+.icon-container.red {
+  background-color: #fee2e2;
+}
+
+.icon-container.green {
+  background-color: #dcfce7;
+}
+
+.icon-container.green svg {
+  color: #16a34a;
+}
+
+.icon-container.orange {
+  background-color: #ffedd5;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card-title-inac {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.card-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.625rem 1rem;
+  background-color: white;
+  color: #4b5563;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Borde sutil para mejorar visibilidad */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  position: relative; /* Para feedback táctil */
+  user-select: none; /* Evitar selección de texto al hacer tap */
+  -webkit-tap-highlight-color: transparent; /* Eliminar resaltado al tap en iOS */
+  min-height: 48px; /* Altura mínima para mejor área táctil */
+  touch-action: manipulation; /* Optimizar para gestos táctiles */
+}
+
+.logout-button:hover,
+.logout-button:active,
+.logout-button.active { /* Clase para feedback visual en dispositivos táctiles */
+  background-color: #f9fafb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px); /* Ligero efecto de elevación */
+}
+
+.logout-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Estilo para un mejor feedback visual en móviles */
+@media (max-width: 767px) {
+  /* Aumentar tamaño para mejor área táctil */
+  .logout-button {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem; /* Espacio adicional al final */
+  }
+  
+  /* Efecto visual al tocar en móviles */
+  .logout-button:active,
+  .logout-button.active {
+    background-color: #f3f4f6;
+  }
+  
+  /* Crear un área de toque más grande alrededor del botón */
+  .logout-button::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+  }
+}
+
+/* Asegurar que el cuerpo de la página tenga scrolling adecuado */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Corregir comportamientos problemáticos de scroll en Chrome y Safari móvil */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none; /* Evitar rebote en algunos navegadores */
+}

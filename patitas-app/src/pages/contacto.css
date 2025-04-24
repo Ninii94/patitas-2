@@ -1,0 +1,76 @@
+.contacto-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .contacto-content {
+    flex: 1 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flyer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .flyer {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .contact-info {
+    background-color: #f8f8f8;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  .contacto-footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+  
+    margin-left: 60px;
+  }
+  
+  .contacto-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (min-width: 768px) {
+    .flyer {
+      max-width: 80%;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .flyer {
+      max-width: 60%;
+    }
+  }

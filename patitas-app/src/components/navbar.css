@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-logo {
+    height: 50px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-link {
+    margin: 0.5rem;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+  }
+  
+.navbar-link:hover {
+    background-color: #97b1f4;
+  }
+  @media screen and (min-width: 768px) {
+    .navbar-logo {
+      height: 70px;
+    }
+  }

@@ -1,0 +1,230 @@
+
+.statistics-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button {
+  background-color: #6366f1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #4f46e5;
+}
+
+.statistics-title {
+  font-size: 2rem;
+  color: #1f2937;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.filters-section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #6366f1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.charts-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.chart-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+}
+
+.chart-title {
+  color: #1f2937;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.totals-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.total-card {
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  min-width: 150px;
+}
+
+.total-card h3 {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.total-value {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem;
+}
+.pets-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.pets-container {
+  padding: 24px;
+}
+
+.pets-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.chart-container {
+  height: 300px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  background-color: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.tooltip {
+  background-color: white;
+  padding: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-label {
+  font-weight: 500;
+}
+
+.tooltip-value {
+  margin-top: 4px;
+}
+
+.new-pets-section,
+.adoption-time-section {
+  grid-column: span 1;
+}
+
+.return-reasons-section {
+  grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .new-pets-section,
+  .adoption-time-section,
+  .return-reasons-section {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistics-container {
+    padding: 1rem;
+  }
+
+  .total-card {
+    min-width: 120px;
+  }
+
+  .chart-card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .totals-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .total-card {
+    width: 100%;
+    max-width: 250px;
+  }
+}

@@ -1,0 +1,48 @@
+.secondary-footer {
+    width: 100%;
+    background-color:#7697b8;
+    padding: 9px 0;
+  
+  }
+  
+  .secondary-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .secondary-footer-content span {
+    font-size: 0.9rem;
+    color: #ecf0f1;  /* 
+    font-weight: 300;  / Fuente más ligera */
+  }
+  
+  .footer-contact {
+    font-size: 0.9rem;
+    color: #11344b;  /*  
+    text-decoration: none;
+    transition: color 0.3s ease;  / Transición suave para el hover */
+    padding: 5px 10px;
+    border: 1px solid #3498db;
+    border-radius: 4px;
+  }
+  
+  .footer-contact:hover {
+    color: #ecf0f1;  
+    text-decoration: none;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .secondary-footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .secondary-footer-content span {
+      margin-bottom: 10px;
+    }
+  }

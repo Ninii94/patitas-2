@@ -1,0 +1,200 @@
+.pre-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  background-color: #d6d7dd;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Añadir estas propiedades para mejorar el scroll */
+  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento suave en iOS */
+  height: auto;
+  min-height: 100vh;
+}
+
+.advertencia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icono-advertencia {
+  font-size: 3rem;
+  color: #b700ff;
+}
+
+.titulo-requisitos {
+  color: #4a4e69;
+  margin-bottom: 1rem;
+}
+
+.requisitos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+}
+
+.requisitos-columna {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.requisito {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.icono-pata {
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  color: #4a4e69;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.imagen-cachorros {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.texto-info {
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Contenedor para el botón */
+.boton-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  touch-action: auto; /* Cambiar de manipulation a auto */
+  position: relative; /* Para que el pseudo-elemento funcione correctamente */
+}
+
+/* Cambiado de boton-conocelos a prepagina-btn */
+.prepagina-btn {
+  background: linear-gradient(45deg, #40e0d0, #8a2be2);
+  border: none;
+  border-radius: 20px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  outline: none;
+  position: relative;
+  z-index: 10;
+  touch-action: auto; /* Cambiar de manipulation a auto */
+  -webkit-tap-highlight-color: transparent;
+  /* Evitar botón demasiado largo en móviles */
+  max-width: 200px;
+  width: auto;
+}
+
+.prepagina-btn:hover,
+.prepagina-btn:active {
+  filter: brightness(1.2);
+}
+
+.texto-boton {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.icono-pata-boton {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .pre-pagina {
+    padding: 2rem;
+  }
+
+  .icono-advertencia {
+    font-size: 4rem;
+  }
+
+  .imagen-cachorros {
+    max-height: 400px;
+    width: auto;
+  }
+
+  .texto-info {
+    font-size: 1rem;
+  }
+
+  .prepagina-btn {
+    font-size: 1.3rem;
+    padding: 12px 28px;
+    max-width: 220px;
+  }
+
+  .icono-pata-boton {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .requisitos-container {
+    flex-direction: column;
+  }
+
+  .imagen-cachorros {
+    order: -1;
+  }
+  
+  /* Mejorar soporte táctil en móviles */
+  .prepagina-btn {
+    min-height: 48px;
+    max-width: 180px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  /* Modificar el área de toque para no bloquear el scroll */
+  .boton-container:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: 1;
+    pointer-events: none; /* No bloquear interacciones */
+  }
+}
+
+/* Nuevas reglas para solucionar problemas de scrolling en Chrome móvil */
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overscroll-behavior: none; /* Evita el rebote en algunos navegadores */
+}
+
+/* Si el componente está dentro de otro contenedor con altura fija */
+#root, [data-reactroot], .app-container {
+  height: auto;
+  min-height: 100%;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}

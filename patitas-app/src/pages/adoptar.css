@@ -1,0 +1,136 @@
+.adoptar-page {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.filtro-container {
+  display: flex;
+  justify-content: center; /* Centrar los filtros en vez de flex-end */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permitir que los filtros se envuelvan en múltiples líneas */
+  gap: 8px; /* Espacio entre los botones cuando se envuelven */
+}
+
+.filtro-btn {
+  background-color: #97b1f4;
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Reducir un poco el padding para móviles */
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 14px; /* Tamaño de texto ligeramente más pequeño para móviles */
+  white-space: nowrap;
+}
+
+.filtro-btn svg {
+  margin-right: 5px;
+}
+
+.mascotas-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Un solo animal por fila en móviles */
+  gap: 15px;
+  justify-content: center;
+}
+
+@media (min-width: 576px) {
+  .filtro-btn {
+    padding: 10px 15px; /* Padding original para pantallas más grandes */
+    font-size: 16px; /* Tamaño de texto original */
+  }
+  
+  .mascotas-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos animales por fila en tablets pequeñas */
+    gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mascotas-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .filtro-container {
+    justify-content: flex-end; /* Volver a alinear a la derecha en pantallas grandes */
+  }
+}
+
+@media (min-width: 1024px) {
+  .mascotas-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mascota-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.mascota-card h3 {
+  margin-top: 0;
+}
+
+.mascota-card h3, .mascota-card p {
+  padding: 0 15px;
+}
+
+.mascota-imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.animated-paw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animated-paw.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.paw-gif {
+  width: 200px;
+  height: 200px;
+  max-width: 80vw;
+  max-height: 80vw;
+}
+
+.paw-text {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .paw-gif {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .paw-text {
+    font-size: 1.2rem;
+  }
+}

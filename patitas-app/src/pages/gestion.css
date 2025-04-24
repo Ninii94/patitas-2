@@ -1,0 +1,235 @@
+@keyframes highlight {
+  0% { background-color: rgba(124, 203, 248, 0.753); }
+  50% { background-color: rgba(128, 241, 235, 0.664); }
+  100% { background-color: transparent; }
+}
+
+.highlight-form {
+  animation: highlight 1.5s ease-out;
+  border-radius: 5px;
+}
+
+#pet-edit-form {
+  scroll-margin-top: 20px; /* Espacio adicional al hacer scroll */
+}
+
+/* Estilos generales */
+.adop-panel-container {
+  padding: 20px;
+  background-color: #f0f8ff;
+  font-family: 'Arial', sans-serif;
+}
+
+.adop-panel-titulo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #663399;
+}
+
+.adop-panel-patita, .adop-panel-patita2 {
+  font-size: 2rem;
+}
+
+.adop-back-button {
+  background-color: #b19cd9;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.adop-back-button:hover {
+  background-color: #8a2be2;
+}
+
+/* Estilos para cada tarjeta de mascota */
+.adop-panel-mascotas-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.adop-panel-mascota-item {
+  background-color: #f9f9ff;
+  border: 1px solid #d1c4e9;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%; 
+}
+.adop-panel-mascota-item:hover {
+  transform: scale(1.05);
+}
+
+.adop-panel-mascota-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.adop-panel-mascota-info p {
+  color: #4b0082;
+  margin: 8px 0;
+}
+
+.adop-estado-adoptado {
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+.adop-button-resubir {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #7a42f4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.adop-button-resubir:hover {
+  background-color: #5f2d91;
+}
+
+/* Modal de devolución */
+.adop-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.adop-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.adop-snackbar {
+  color: #b22222;
+  font-weight: bold;
+}
+
+.adop-input-password {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #d1c4e9;
+  border-radius: 8px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+.adop-button-confirm, .adop-button-cancel {
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.adop-button-confirm {
+  background-color: #8a2be2;
+  color: #fff;
+}
+
+.adop-button-cancel {
+  background-color: #ccc;
+  color: #333;
+}
+
+.adop-select-motivo {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1c4e9;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.adop-modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Botón de mostrar/ocultar contraseña */
+.adop-input-password + button {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #8a2be2;
+  display: inline;
+  vertical-align: middle;
+  margin-top: -80px;
+  margin-left: 265px;
+}
+
+.adop-input-password + button::before {
+  content: '🙈'; 
+  margin-right: 5px;
+}
+
+.adop-input-password[aria-label="show-password"] + button::before {
+  content: '🐵'; 
+}
+.adop-filtro-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.adop-filtro-label {
+  font-size: 1rem;
+  color: #7a42f4;
+  margin-right: 8px;
+}
+
+.adop-filtro-select {
+  padding: 8px;
+  border: 1px solid #d1c4e9;
+  border-radius: 8px;
+  background-color: #f9f9ff;
+  color: #7a42f4;
+  font-size: 1rem;
+  
+}
+.adop-crying-gif {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+  .adop-panel-mascotas-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .adop-panel-mascotas-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

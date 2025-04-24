@@ -1,0 +1,153 @@
+.hogar-de-transito {
+  font-family: poppins, Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.participa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.participa h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contenido-participa {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.imagen-perrito {
+  max-width: 300px;
+  height: auto;
+}
+
+.h1participa {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.requisitos {
+  position: relative;
+  /* Aseguramos que haya suficiente espacio inferior para el gato y el botón */
+  margin-bottom: 70px;
+}
+
+.requisitos h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.requisitos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.requisitos li {
+  margin-bottom: 15px;
+}
+
+.requisitos-especificos {
+  margin-top: 30px;
+}
+
+.imagen-gato {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  max-width: 200px;
+  height: auto;
+  /* Aseguramos que la imagen esté detrás de otros elementos */
+  z-index: 1;
+  pointer-events: none; /* Importante: hace que la imagen no intercepte clics */
+}
+
+/* Contenedor para el botón que asegura que esté por encima de otros elementos */
+main {
+  position: relative;
+  z-index: 2;
+}
+
+.postulate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #97b1f4;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  /* Aseguramos que el botón siempre esté por encima de otros elementos */
+  position: relative;
+  z-index: 10;
+  /* Aumentamos el área de toque en móviles */
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.postulate-btn:hover {
+  background: linear-gradient(45deg, #40e0d0, #8a2be2);
+}
+
+.pata {
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .contenido-participa {
+    flex-direction: column;
+  }
+
+  .imagen-perrito {
+    max-width: 200px;
+  }
+
+  .requisitos h2 {
+    font-size: 1.5rem;
+  }
+
+  .imagen-gato {
+    max-width: 150px;
+    bottom: -30px;
+  }
+  
+  /* Aumentamos el área de toque del botón en tablets */
+  .postulate-btn {
+    padding: 12px 24px;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .participa h1 {
+    font-size: 2rem;
+  }
+
+  .h1participa {
+    font-size: 1rem;
+  }
+
+  .imagen-gato {
+    display: none;
+  }
+  
+  /* Aumentamos aún más el área de toque en móviles pequeños */
+  .postulate-btn {
+    padding: 15px 30px;
+    min-height: 52px;
+    width: 80%; /* Hacemos el botón más ancho en móviles pequeños */
+    font-size: 1.3rem;
+  }
+}

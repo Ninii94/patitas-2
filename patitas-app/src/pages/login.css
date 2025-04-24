@@ -1,0 +1,123 @@
+.overlay {
+    background: linear-gradient(to bottom right, #ffc0cb, #87cefa);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .head-form {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .head-form h3 {
+    font-size: 25px;
+    color: #f173eb;
+    font-family: 'Playfair Display', serif;
+    
+  }
+  .bienvenida {
+    color: rgb(202, 74, 74);
+  }
+  .head-form p {
+    font-size: 16px;
+    color: #41353d;
+    font-family: 'Abel', sans-serif;
+  }
+  
+  .field-set {
+    margin-bottom: 20px;
+  }
+  
+  .input-item {
+    color: #f1c1d9;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .form-input {
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    font-size: 16px;
+    font-family: 'Abel', sans-serif;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #ff69b4;
+    outline: none;
+  }
+  
+  .log-in {
+    width: 100%;
+    height: 40px;
+    background-color: #63c1ce;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .log-in:hover {
+    background-color: #ff0080;
+  }
+  
+  .other {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .emojis {
+    position: absolute;
+    left: 58%;
+    transform: translateY(-250%);
+    cursor: pointer;
+    color: #20151b;
+    font-size: 16px;
+  }
+  .new-user {
+    font-size: 14px;
+    color: #00070c;
+    font-family: 'Abel', sans-serif;
+  }
+  
+  .sign-up {
+    background-color: #ff56e3;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sign-up:hover {
+    background-color: #6495ed;
+  }
+  
+  .sign-up i {
+    margin-left: 5px;
+  }

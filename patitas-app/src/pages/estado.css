@@ -1,0 +1,232 @@
+.estdo-container {
+    padding: 2rem;
+    background-color: #f5f8fa;
+    min-height: 100vh;
+  }
+  
+  .estdo-back-button {
+    background-color: #6B7280;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .estdo-back-button:hover {
+    background-color: #4B5563;
+  }
+  
+  .estdo-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .estdo-select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid #E5E7EB;
+    background-color: white;
+    min-width: 200px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .estdo-select:focus {
+    outline: none;
+    border-color: #60A5FA;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+  }
+  
+  .estdo-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .estdo-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 2px solid #E5E7EB;
+  }
+  
+  .estdo-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .estdo-card-image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .estdo-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .estdo-card-content {
+    padding: 1.5rem;
+  }
+  
+  .estdo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .estdo-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1F2937;
+    margin: 0;
+  }
+  
+  .estdo-status-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  /* Status colors */
+  .estdo-status-adoptado {
+    background-color: #10B981;
+    color: white;
+  }
+  
+  .estdo-status-disponible {
+    background-color: #60A5FA;
+    color: white;
+  }
+  
+  .estdo-status-devuelto {
+    background-color: #F59E0B;
+    color: white;
+  }
+  
+  .estdo-status-inactivo {
+    background-color: #EF4444;
+    color: white;
+  }
+  
+  .estdo-status-reservado {
+    background-color: #8B5CF6;
+    color: white;
+  }
+  
+  .estdo-status-en-transito {
+    background-color: #6366F1;
+    color: white;
+  }
+  
+  .estdo-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .estdo-info-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-bottom: 0.25rem;
+  }
+  
+  .estdo-info-value {
+    color: #1F2937;
+    font-weight: 500;
+  }
+  
+  .estdo-card-dates {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .estdo-card-section {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Loading spinner */
+  .estdo-loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+  
+  .estdo-spinner {
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    color: #60A5FA;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .estdo-opacity-25 {
+    opacity: 0.25;
+  }
+  
+  .estdo-opacity-75 {
+    opacity: 0.75;
+  }
+  
+  /* Error state */
+  .estdo-error {
+    text-align: center;
+    color: #EF4444;
+    padding: 2rem;
+  }
+  .estdo-back-button{
+    background-color: #8c73c9;
+  }
+  /* Paw print decorations */
+  .estdo-card::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 1.5rem;
+    opacity: 0.1;
+    transform: rotate(45deg);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .estdo-container {
+      padding: 1rem;
+    }
+    
+    .estdo-controls {
+      flex-direction: column;
+    }
+    
+    .estdo-select {
+      width: 100%;
+    }
+  }

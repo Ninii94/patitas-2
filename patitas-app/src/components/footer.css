@@ -1,0 +1,161 @@
+.foot-footer {
+  background-color: #7393B3;
+  color: white;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.foot-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.foot-section {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+}
+
+.foot-logo {
+  width: 100px;
+  height: 54px;
+  margin: 0 auto 1rem;
+}
+
+.foot-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.foot-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.foot-admin-link {
+  color: #a8a7a7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.foot-admin-link:hover {
+  color: rgb(250, 247, 73);
+}
+
+.foot-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.foot-nav-list li {
+  margin-bottom: 0.5rem;
+}
+
+.foot-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.foot-link:hover {
+  color: #ebf832;
+}
+
+.foot-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.foot-social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.foot-social-link:hover {
+  color: #e7e433;
+}
+
+@media screen and (max-width: 768px) {
+  .foot-footer {
+    padding: 2rem 0; /* Quitamos el padding lateral para evitar desplazamientos */
+  }
+  
+  .foot-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .foot-section {
+    width: 100%;
+    max-width: 100%; /* Ocupamos todo el ancho disponible */
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  
+  .foot-logo {
+    margin: 0 auto 1rem;
+  }
+  
+  .foot-title {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .foot-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .foot-nav-list li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .foot-social-links {
+    align-items: center;
+    width: 100%;
+  }
+  
+  .foot-social-link {
+    justify-content: center;
+    width: auto; /* Ancho automático en lugar de fijo */
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 5px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .foot-section {
+    text-align: left;
+  }
+  
+  .foot-logo {
+    margin: 0 0 1rem 0;
+  }
+  
+  .foot-social-links {
+    align-items: flex-start;
+  }
+}
